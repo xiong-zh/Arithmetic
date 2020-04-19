@@ -3,7 +3,9 @@ concurrent.future线程池的用法
 '''
 
 from concurrent.futures import ThreadPoolExecutor
-import requests
+
+# import requests
+from pip._vendor import requests
 
 urls = [
     'https://liyuankun.cn',

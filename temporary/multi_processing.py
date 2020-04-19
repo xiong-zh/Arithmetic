@@ -7,6 +7,7 @@ import time, random
 
 l = ['python', 'java', 'js']
 
+
 def write(queue):
     '''
     向队列中添加数据
@@ -18,6 +19,7 @@ def write(queue):
         queue.put_nowait(value)
         time.sleep(random.random())
 
+
 def read(queue):
     while True:
         if not queue.empty():
@@ -26,14 +28,14 @@ def read(queue):
         else:
             break
 
+
 if __name__ == '__main__':
     queue = Queue()
-    write_data = Process(target=write, args=(queue, ))
-    read_data = Process(target=read, args=(queue, ))
+    write_data = Process(target=write, args=(queue,))
+    read_data = Process(target=read, args=(queue,))
 
     write_data.start()
     write_data.join()
     print('*' * 20)
     read_data.start()
     read_data.join()
-
