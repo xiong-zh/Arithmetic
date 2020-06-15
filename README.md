@@ -1,4 +1,4 @@
-## PythonArithmetic
+## Arithmetic
 存储算法的Python实现
 
 ## 目录
